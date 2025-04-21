@@ -1,0 +1,125 @@
+asyncapi: 2.0.0
+info:
+  title: ProjectPlanner Realtime API
+  version: 1.0.0
+  description: >
+    This AsyncAPI specification defines the realtime websocket events  for
+    ProjectPlanner MVP. It focuses exclusively on the realtime events  for task
+    status updates, new comment additions, and notification creation.
+servers:
+  development:
+    url: http://localhost:1337
+    protocol: websocket
+channels:
+  task_status_updated:
+    subscribe:
+      summary: Receive realtime updates when a task's status changes.
+      operationId: on_task_status_updated
+      message:
+        $ref: "#/components/messages/taskStatusUpdated"
+  new_comment_added:
+    subscribe:
+      summary: Receive realtime notifications when a new comment is added to a task.
+      operationId: on_new_comment_added
+      message:
+        $ref: "#/components/messages/newCommentAdded"
+  notification_created:
+    subscribe:
+      summary: Receive realtime notifications when a new notification is generated.
+      operationId: on_notification_created
+      message:
+        $ref: "#/components/messages/notificationCreated"
+components:
+  messages:
+    taskStatusUpdated:
+      name: task_status_updated
+      title: Task Status Updated
+      summary: Event emitted when a task's status is updated (e.g., via drag-and-drop
+        on Kanban board).
+      payload:
+        $ref: "#/components/schemas/taskStatusUpdated"
+    newCommentAdded:
+      name: new_comment_added
+      title: New Comment Added
+      summary: Event emitted when a new comment is added to a task.
+      payload:
+        $ref: "#/components/schemas/newCommentAdded"
+    notificationCreated:
+      name: notification_created
+      title: Notification Created
+      summary: Event emitted when a new notification is generated (e.g., for task
+        updates or mentions).
+      payload:
+        $ref: "#/components/schemas/notificationCreated"
+  schemas:
+    taskStatusUpdated:
+      type: object
+      required:
+        - task_uid
+        - status
+        - updated_at
+      properties:
+        task_uid:
+          type: string
+          description: Unique identifier for the task.
+        status:
+          type: string
+          description: New status of the task (e.g., "to_do", "in_progress", "completed").
+        updated_at:
+          type: string
+          format: date-time
+          description: Timestamp when the task status was updated.
+    newCommentAdded:
+      type: object
+      required:
+        - comment_uid
+        - task_uid
+        - user_uid
+        - content
+        - created_at
+      properties:
+        comment_uid:
+          type: string
+          description: Unique identifier for the comment.
+        task_uid:
+          type: string
+          description: Unique identifier for the task the comment relates to.
+        user_uid:
+          type: string
+          description: Unique identifier for the user who added the comment.
+        content:
+          type: string
+          description: The text of the comment.
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the comment was created.
+    notificationCreated:
+      type: object
+      required:
+        - uid
+        - user_uid
+        - notification_type
+        - content
+        - is_read
+        - created_at
+      properties:
+        uid:
+          type: string
+          description: Unique identifier for the notification.
+        user_uid:
+          type: string
+          description: Unique identifier for the user receiving the notification.
+        notification_type:
+          type: string
+          description: Type of notification (e.g., "task_update", "comment", "reminder").
+        content:
+          type: string
+          description: The content/message of the notification.
+        is_read:
+          type: boolean
+          description: Flag indicating whether the notification has been read.
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the notification was created.

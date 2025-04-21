@@ -1,0 +1,19 @@
+{
+  "timestamp": 1744815170864,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "GV_Footer",
+      "version": "1744814880540"
+    }
+  },
+  "projectId": "project-planner-like-asana",
+  "files": [
+    {
+      "path": "../../apps/project-planner-like-asana/vitereact/src/components/views/GV_Footer.tsx",
+      "type": "text",
+      "size": 1292,
+      "dependencies": false
+    }
+  ]
+}

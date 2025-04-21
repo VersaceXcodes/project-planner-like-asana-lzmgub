@@ -1,0 +1,19 @@
+{
+  "timestamp": 1744815235654,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_Onboarding",
+      "version": "latest"
+    }
+  },
+  "projectId": "project-planner-like-asana",
+  "files": [
+    {
+      "path": "../../apps/project-planner-like-asana/vitereact/src/components/views/UV_Onboarding.tsx",
+      "type": "text",
+      "size": 3488,
+      "dependencies": false
+    }
+  ]
+}

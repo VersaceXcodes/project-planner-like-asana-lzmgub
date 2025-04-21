@@ -1,0 +1,19 @@
+{
+  "timestamp": 1744814917441,
+  "operation": {
+    "id": "webapp:react:root",
+    "refs": {
+      "id": "app",
+      "version": "latest"
+    }
+  },
+  "projectId": "project-planner-like-asana",
+  "files": [
+    {
+      "path": "../../apps/project-planner-like-asana/vitereact/src/App.tsx",
+      "type": "text",
+      "size": 3087,
+      "dependencies": false
+    }
+  ]
+}

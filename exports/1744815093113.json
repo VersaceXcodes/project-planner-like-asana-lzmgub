@@ -1,0 +1,19 @@
+{
+  "timestamp": 1744815093113,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_TeamManagement",
+      "version": "latest"
+    }
+  },
+  "projectId": "project-planner-like-asana",
+  "files": [
+    {
+      "path": "../../apps/project-planner-like-asana/vitereact/src/components/views/UV_TeamManagement.tsx",
+      "type": "text",
+      "size": 9650,
+      "dependencies": false
+    }
+  ]
+}

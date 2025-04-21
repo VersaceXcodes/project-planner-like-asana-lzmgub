@@ -1,0 +1,19 @@
+{
+  "timestamp": 1744815018916,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "UV_TaskCreation",
+      "version": "1744814880460"
+    }
+  },
+  "projectId": "project-planner-like-asana",
+  "files": [
+    {
+      "path": "../../apps/project-planner-like-asana/vitereact/src/components/views/UV_TaskCreation.tsx",
+      "type": "text",
+      "size": 4527,
+      "dependencies": false
+    }
+  ]
+}

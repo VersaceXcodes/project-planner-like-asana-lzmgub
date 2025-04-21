@@ -1,0 +1,19 @@
+{
+  "timestamp": 1744815164756,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "GV_HamburgerMenu",
+      "version": "1744814880528"
+    }
+  },
+  "projectId": "project-planner-like-asana",
+  "files": [
+    {
+      "path": "../../apps/project-planner-like-asana/vitereact/src/components/views/GV_HamburgerMenu.tsx",
+      "type": "text",
+      "size": 3042,
+      "dependencies": false
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "timestamp": 1744814731374,
+  "operation": {
+    "id": "backend:server:main"
+  },
+  "projectId": "project-planner-like-asana",
+  "files": [
+    {
+      "path": "../../apps/project-planner-like-asana/backend/server.js",
+      "type": "text",
+      "size": 12559,
+      "dependencies": false
+    }
+  ]
+}

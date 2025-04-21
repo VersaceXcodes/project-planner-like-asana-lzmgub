@@ -1,0 +1,15 @@
+{
+  "timestamp": 1744811293946,
+  "operation": {
+    "id": "backend:specifications:openapi"
+  },
+  "projectId": "project-planner-like-asana",
+  "files": [
+    {
+      "path": "../../apps/project-planner-like-asana/backend/openapi.yaml",
+      "type": "text",
+      "size": 10224,
+      "dependencies": false
+    }
+  ]
+}

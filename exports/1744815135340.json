@@ -1,0 +1,19 @@
+{
+  "timestamp": 1744815135340,
+  "operation": {
+    "id": "webapp:react:views",
+    "refs": {
+      "id": "GV_Sidebar",
+      "version": "latest"
+    }
+  },
+  "projectId": "project-planner-like-asana",
+  "files": [
+    {
+      "path": "../../apps/project-planner-like-asana/vitereact/src/components/views/GV_Sidebar.tsx",
+      "type": "text",
+      "size": 3324,
+      "dependencies": false
+    }
+  ]
+}
